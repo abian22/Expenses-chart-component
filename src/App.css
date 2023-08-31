@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "regular";
+  src: url("../src/assets/fonts/DMSans_24pt-Regular.ttf");
+}
+@font-face {
+  font-family: "bold";
+  src: url("../src/assets/fonts/DMSans-Bold.ttf");
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.graphic:hover {
+  opacity: 50%;
+}
+
+/* Estilo personalizado para el tooltip */
+/* Estilo personalizado para el tooltip */
+.graphic {
+  position: relative; /* Añadido para establecer un contexto de posicionamiento */
+}
+
+.graphic::before {
+  content: attr(title);
+  position: absolute;
+  top: -30px; 
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  visibility: hidden; 
+  opacity: 100%;
+
+}
+
+/* Mostrar el tooltip al pasar el ratón */
+.graphic:hover::before {
+  visibility: visible; /* Mostrar */
+  opacity: 100%;
+
+}
+
+
